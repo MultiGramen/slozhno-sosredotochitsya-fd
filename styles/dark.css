@@ -4,24 +4,30 @@
   переключая тему
 */
 
-:root {
-  --bg-image: url("../images/cover-image-dark.png");
-}
-
 :root.theme-dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --bg-image: url("../images/cover-image-dark.png");
+  --color-title: #DB00FF;
+  --color-title-text: #FF0070;
+  --font-family: 'IBM Plex Mono', sans-serif;
+  --font-weight: 700;
+  --font-size: 18px;
+  --bg-color-subtitle-text: #FF0070;
+  --color-subtitle-text: #000028;
+  --color-text: #F1B2CE;
 }
 
 .header__text-right {
   position: relative;
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: var(--font);
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
   color: #FF0070;
+  left: 10px;
 }
 
 .header__rec {
@@ -33,4 +39,33 @@
   border-radius: 50%;
   box-shadow: 0px 0px 5px 2px #FF0070;
   top: 10px;
+  left: 45px;
+}
+
+.content {
+  margin-top: 40px;
+}
+
+.title-text {
+  color: var(--color-title-text);
+  font-weight: var(--font-weight);
+  font-family: var(--font-family);
+  margin-bottom: 20px;
+}
+
+.subtitle-text {
+  background-color: var(--bg-color-subtitle-text);
+  color: var(--color-subtitle-text);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.text {
+  color: var(--color-text);
+}
+
+.section {
+  margin-bottom: 50px;
 }

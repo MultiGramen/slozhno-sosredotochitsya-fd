@@ -4,20 +4,30 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   display: grid;
   justify-content: end;
+  background-color: #000028;
+  height: 100%;
+}
+
+.header {
+  display: grid;
+  justify-content: end;
   background-image: var(--bg-image);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-attachment: fixed;
-  background-color: #000028;
-  height: 100%;
-  margin-top: 0px;
+  height: 668px;
+}
+
+.header__block-right {
+  display: grid;
+  justify-content: end;
 }
 
 .header__theme-menu-list {
   list-style-type:none;
 }
 
-.page::before {
+.header::before {
   content: '';
   position: absolute;
   display: block;
@@ -29,8 +39,29 @@
   border-inline-end: 1px solid #ff0070;
 }
 
+.header::after {
+  content: '';
+  position: absolute;
+  display: block;
+  block-size: 25px;
+  inline-size: 25px;
+  left: 10px;
+  bottom: 10px;
+  border-block-end: 1px solid #ff0070;
+  border-inline-start: 1px solid #ff0070;
+}
+
+.header__rec::after {
+  content: "";
+  display: block;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: #ff0070;
+}
+
 .header__theme-menu {
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .header__theme-menu-button {
@@ -49,6 +80,31 @@
   border: 1px solid #FF0070;
   width: 70px;
   height: 26px;
+}
+
+.title {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-weight: 700;
+  font-size: 116px;
+  line-height: 83%;
+  color: var(--color-title);
+  text-shadow: 4px 4px 0 #FF0070;
+}
+
+.footer {
+  height: 668px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: 116px;
+  line-height: 83%;
+  color: var(--color-title);
+  text-shadow: 2px 2px 0 #FF0070;
 }
 
 @media (width <= 1024px) {
