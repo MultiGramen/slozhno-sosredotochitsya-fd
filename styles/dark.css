@@ -9,25 +9,15 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --bg-image: url("../images/cover-image-dark.png");
-  --color-title: #DB00FF;
-  --color-title-text: #FF0070;
-  --font-family: 'IBM Plex Mono', sans-serif;
-  --font-weight: 700;
-  --font-size: 18px;
-  --bg-color-subtitle-text: #FF0070;
-  --color-subtitle-text: #000028;
-  --color-text: #F1B2CE;
+
 }
 
 .header__text-right {
   position: relative;
-  font-family: var(--font);
-  font-weight: 400;
-  font-size: 18px;
+  font-size: var(--font-size);
   line-height: 25px;
-  color: #FF0070;
-  left: 10px;
+  color: var(--accent-color);
+  left: 5px;
 }
 
 .header__rec {
@@ -35,26 +25,29 @@
   content: "";
   width: 9px;
   height: 9px;
-  background-color: #FF0070;
+  background-color: var(--accent-color);
   border-radius: 50%;
   box-shadow: 0px 0px 5px 2px #FF0070;
   top: 10px;
   left: 45px;
 }
 
-.content {
-  margin-top: 40px;
+.selection-text {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  color: var(--color-text);
+  text-decoration: none;
 }
 
 .title-text {
-  color: var(--color-title-text);
+  color: var(--accent-color);
   font-weight: var(--font-weight);
   font-family: var(--font-family);
+  font-size: var(--font-size);
   margin-bottom: 20px;
 }
 
 .subtitle-text {
-  background-color: var(--bg-color-subtitle-text);
+  background-color: var(--accent-color);
   color: var(--color-subtitle-text);
   font-weight: var(--font-weight);
   font-size: var(--font-size);
@@ -63,7 +56,10 @@
 }
 
 .text {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
   color: var(--color-text);
+  line-height: var(--line-height);
 }
 
 .section {
