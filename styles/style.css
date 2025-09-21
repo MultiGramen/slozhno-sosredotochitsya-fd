@@ -127,6 +127,33 @@ body {
   margin-top: 40px;
 }
 
+.section {
+  margin-bottom: 80px;
+}
+
+/* Сетки */
+
+.section-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.section-inner-1 {
+  grid-column-start: 2;
+}
+
+.section-3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, auto-fit);
+  grid-template-rows: repeat(3, auto-fit);
+  gap: 20px;
+}
+
 .footer {
   display: grid;
   justify-content: center;
@@ -141,13 +168,6 @@ body {
   line-height: 83%;
   color: var(--color-title);
   text-shadow: 2px 2px 0 var(--accent-color);
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, auto-fit);
-  grid-template-rows: repeat(3, auto-fit);
-  gap: 20px;
 }
 
 @media (width > 1024px) {
@@ -181,5 +201,20 @@ body {
   .subtitle {
     grid-column-start: 3;
     grid-row-end: 4;
+  }
+
+  .title-text-2 {
+    width: 236px;
+    height: 70px;
+  }
+}
+
+@media (width <= 375px) {
+  .section-1 {
+    display: none;
+  }
+  
+  .section-3 {
+    grid: none;
   }
 }

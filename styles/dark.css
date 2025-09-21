@@ -61,7 +61,3 @@
   color: var(--color-text);
   line-height: var(--line-height);
 }
-
-.section {
-  margin-bottom: 50px;
-}
