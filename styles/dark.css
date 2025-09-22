@@ -39,7 +39,7 @@
 }
 
 .title-text {
-  color: var(--accent-color);
+  color: var(--color-title-text);
   font-weight: var(--font-weight);
   font-family: var(--font-family);
   font-size: var(--font-size);

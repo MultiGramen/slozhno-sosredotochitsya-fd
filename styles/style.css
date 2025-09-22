@@ -9,8 +9,8 @@ body {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   display: grid;
   justify-content: end;
-  background-color: #000028;
-  height: 100%;
+  background-color: var(--bg-color);
+  height: 100vh;
   padding: 10px;
 }
 
@@ -40,8 +40,8 @@ body {
   top: 0;
   right: 0px;
   bottom: -80px;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--menu-color);
+  border-inline-end: 1px solid var(--menu-color);
 }
 
 .decorated-zone::after {
@@ -52,8 +52,8 @@ body {
   inline-size: 25px;
   left: 0px;
   bottom: 10px;
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--menu-color);
+  border-inline-start: 1px solid var(--menu-color);
 }
 
 .header__rec::after {
@@ -76,34 +76,34 @@ body {
 
 .header__theme-menu-button {
   background-color: rgba(28, 28, 28, 0);
-  margin-bottom: 10px;
+  padding-bottom: 20px;
   border: 0px;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
-  color: var(--accent-color);
+  color: var(--menu-color);
   text-transform: lowercase;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid #FF0070;
+  border: 1px solid var(--menu-color);
   width: 70px;
   height: 26px;
 }
 
 .header__theme-menu-button:focus {
-  border-bottom: 1px solid #FF0070;
+  border-bottom: 1px solid var(--menu-color);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--menu-color);
   width: 70px;
   height: 26px;
 }
 
 .title {
-  margin-top: 65px;
+  margin-top: 50px;
   margin-bottom: 55px;
   font-family: var(--font-family);
   font-weight: var(--font-weight);
@@ -149,8 +149,6 @@ body {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, auto-fit);
-  grid-template-rows: repeat(3, auto-fit);
   gap: 20px;
 }
 
@@ -158,7 +156,7 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  height: 667px;
+  min-height: 667px;
 }
 
 .footer-text {
@@ -174,9 +172,16 @@ body {
   .page {
     padding: 20px;
   }
+
   .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
+
+  .section-wrapper {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }  
 }
 
 @media (width > 768px) {
@@ -188,6 +193,11 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+  }
+
+  .section-tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .header__block-right {
