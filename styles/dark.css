@@ -12,12 +12,16 @@
 
 }
 
+.header {
+  background-image: var(--bg-image);
+}
+
 .header__text-right {
-  position: relative;
+  position: absolute;
   font-size: var(--font-size);
   line-height: 25px;
   color: var(--accent-color);
-  left: 5px;
+  right: 30px;
 }
 
 .header__rec {
