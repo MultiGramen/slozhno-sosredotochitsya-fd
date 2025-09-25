@@ -108,6 +108,11 @@
   margin-bottom: 65px;
 }
 
+.section-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .content {
   margin-top: 40px;
 }
@@ -185,7 +190,7 @@
   }
 }
 
-@media (width > 768px) {
+@media (width >= 768px) {
   .page {
     padding: 10px;
   }
@@ -231,6 +236,10 @@
   .section {
     grid: none;
   }
+
+  .section-block {
+    display: block;
+  }  
 
   .gallery {
     display: block;
