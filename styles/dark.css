@@ -16,24 +16,25 @@
   background-image: var(--bg-image);
 }
 
-.header__text-right {
+.header__rec {
   position: absolute;
   font-size: var(--font-size);
   line-height: 25px;
   color: var(--accent-color);
-  right: 30px;
+  right: 10px;
+  display: flex;
 }
 
-.header__rec {
-  position: absolute;
+.header__rec::after {
   content: "";
-  width: 9px;
-  height: 9px;
-  background-color: var(--accent-color);
+  display: block;
+  inline-size: 10px;
+  block-size: 10px;
   border-radius: 50%;
+  background-color: var(--accent-color);
+  margin-top: 7px;
+  margin-left: 5px;
   box-shadow: 0px 0px 5px 2px #FF0070;
-  top: 10px;
-  left: 45px;
 }
 
 .selection-text {

@@ -1,10 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-body {
-  padding: 0;
-  margin: 0;
-}
-
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   display: grid;
@@ -23,7 +18,7 @@ body {
   height: 100vh;
 }
 
-.header__block-right {
+.header__block-theme {
   display: grid;
   justify-content: end;
 }
@@ -55,15 +50,6 @@ body {
   bottom: 10px;
   border-block-end: 1px solid var(--menu-color);
   border-inline-start: 1px solid var(--menu-color);
-}
-
-.header__rec::after {
-  content: "";
-  display: block;
-  inline-size: 9px;
-  block-size: 9px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
 }
 
 .header__theme-menu-item {
@@ -233,7 +219,6 @@ body {
 }
 
 @media (width <= 375px) {
-
   .header__theme-menu-list {
     display: block;
     margin-top: 50px;
@@ -243,7 +228,7 @@ body {
     margin-top: 120px;
   }
 
-  .section-3 {
+  .section {
     grid: none;
   }
 
