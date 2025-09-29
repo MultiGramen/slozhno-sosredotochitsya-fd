@@ -9,15 +9,29 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --bg-image: background-image: none;
-  --bg-color: #FFC2E6;
+  --bg-image: url("../images/cover-image-light.png");
+  --bg-color: #FFF1F7;
   --accent-color: #ff8dcb;
   --menu-color: #353430;
   --color-text: #353430;
-  --color-title: #FF8DCB;
+  --color-title: #FFC2E6;
   --color-title-text: #353430;
 
-  .header__text-right {
+  .header__rec {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-image: url("../images/cover-image-light.png");
+    --color-title: #FFC2E6;
+    --accent-color: #FF8DCB;
+    --color-text: #353430;
+    --color-title-text:   --color-title-text: #353430;;
+     
+  }
+  .header__rec {
     display: none;
   }
 }
