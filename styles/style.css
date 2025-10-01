@@ -326,6 +326,8 @@
 
   .subtitle {
     min-height: 120px;
+    grid-column-start: 3;
+    grid-row-end: 4;
   }
 
   .section-tablet {
@@ -342,11 +344,6 @@
   .subtitle-container {
     margin-inline-start: 384px;
     margin-inline-end: 20px;
-  }
-
-  .subtitle {
-    grid-column-start: 3;
-    grid-row-end: 4;
   }
 
   .content {
@@ -387,6 +384,7 @@
 
   .title {
     margin-block-start: 0px;
+    margin-inline-start: 0px;
   }
 
   .subtitle-container {
@@ -394,6 +392,15 @@
     margin-block-end: 0;
     margin-inline-start: 0;
     margin-inline-end: 0;
+  }
+
+  .subtitle {
+    min-width: 0px;
+  }
+
+  .content {
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
   }
 
   .section {
