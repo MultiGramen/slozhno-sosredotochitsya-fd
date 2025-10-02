@@ -13,6 +13,8 @@
   --bg-image: url("../images/cover-image-dark.png");
   --accent-color: #FF0070;
   --color-title: #DB00FF;
+  --color-title-text: #FF0070;
+  --color-text: #F1B2CE;
 }
 
 .page {
