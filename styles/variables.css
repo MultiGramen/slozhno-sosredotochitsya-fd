@@ -3,6 +3,7 @@
   и их переопределение под различные устройства
 */
 
+@media (prefers-color-scheme: dark) {
 :root {
   --bg-image: url("../images/cover-image-dark.png");
   --color-title: #DB00FF;
@@ -17,4 +18,26 @@
   --menu-color: #FF0070;
   --bg-color: #000028;
   --color-title-text: #FF0070;
+  --border-menu-color: rgba(255, 0, 112, 0.4);
+  --title-rec: flex;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+:root {
+  --bg-image: url("../images/cover-image-dark.png");
+  --color-title: #DB00FF;
+  --color-text: #F1B2CE;
+  --accent-color: #FF0070;
+  --font-family: "IBM Plex Mono", monospace;
+  --font-weight: 700;
+  --font-style: Bold;
+  --font-size: 18px;
+  --line-height: 23.4px;
+  --color-subtitle-text: #000028;
+  --menu-color: #FF0070;
+  --bg-color: #000028;
+  --color-title-text: #FF0070;
+  --border-menu-color: rgba(50, 49, 45, 0.4);
+  }
 }

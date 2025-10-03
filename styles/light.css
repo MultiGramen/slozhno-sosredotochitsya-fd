@@ -16,10 +16,8 @@
   --color-text: #353430;
   --color-title: #FFC2E6;
   --color-title-text: #353430;
-
-  .header__rec {
-    display: none;
-  }
+  --border-menu-color: rgba(50, 49, 45, 0.4);
+  --title-rec: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -28,10 +26,7 @@
     --color-title: #FFC2E6;
     --accent-color: #FF8DCB;
     --color-text: #353430;
-    --color-title-text:   --color-title-text: #353430;;
-     
-  }
-  .header__rec {
-    display: none;
+    --menu-color: #353430;
+    --title-rec: none;
   }
 }

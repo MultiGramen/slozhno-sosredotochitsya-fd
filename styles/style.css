@@ -5,6 +5,7 @@
   display: grid;
   justify-content: end;
   background-color: var(--bg-color);
+  min-height: 1024px;
   height: 100vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -36,7 +37,7 @@
   margin-block-start: 7px;
   margin-inline-start: 10px;
   margin-inline-end: 20px;
-  box-shadow: 0px 0px 5px 2px #FF0070;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
 }
 
 .header__rec {
@@ -46,7 +47,7 @@
   line-height: 25px;
   color: var(--accent-color);
   right: 10px;
-  display: flex;
+  display: var(--title-rec);
 }
 
 .header__theme-menu-list {
@@ -89,7 +90,7 @@
 }
 
 .header__theme-menu-button {
-  background-color: rgba(28, 28, 28, 0);
+  background: transparent;
   border: 0px;
   font-family: var(--font-family);
   font-weight: 400;
@@ -98,13 +99,10 @@
   color: var(--menu-color);
   text-transform: lowercase;
   margin-block-end: 10px;
-  opacity: 0.5;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--menu-color);
-  height: 26px;
-  border-color: transparent;
+  border: 1px solid var(--border-menu-color);
 }
 
 .header__theme-menu-button:focus {
@@ -117,7 +115,6 @@
 
 .header__theme-menu-button_active {
   border: 1px solid var(--menu-color);
-  height: 26px;
   pointer-events: none
 }
 
@@ -146,7 +143,6 @@
   font-weight: bold;
   font-size: var(--font-size);
   line-height: 23.4px;
-  min-height: 71px;
 }
 
 .content {
@@ -215,7 +211,7 @@
 }
 
 .selection-text:focus {
-  border: 1px solid #F1B2CE;
+  border: 1px solid var(--color-text);
 }
 
 .selection-text {
@@ -227,7 +223,8 @@
 .selection-text:hover {
   text-decoration-skip-ink: none;
   text-decoration: underline;
-  text-decoration-color: #F1B2CE;
+  text-decoration-color: var(--color-text);
+  border-bottom: 1px solid var(--color-text);
 }
 
 /* Сетки */
@@ -293,10 +290,9 @@
 }
 
 @media (width <= 768px) {
-
   .header {
-    display: grid;
-    height: 1024px;
+    min-height: 768px;
+    height: 100vh;
     padding-block-start: 10px;
     padding-block-end: 10px;
     padding-inline-start: 10px;
@@ -327,19 +323,16 @@
   }
 
   .subtitle {
-    min-height: 120px;
     grid-column-start: 3;
     grid-row-end: 4;
   }
 
   .section-tablet {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
   .section-wrapper {
-    display: grid;
     grid-template-columns: none;
   }
 
@@ -352,7 +345,7 @@
   }
 
   .footer {
-    height: 1024px;
+    min-height: 1024px;
   }
 
   .footer-text {
@@ -362,7 +355,8 @@
 
 @media (width <= 375px) {
   .header {
-    height: 768px;
+    min-height: 375px;
+    height: 100vh;
   }
 
   .header__block-theme {
@@ -418,7 +412,7 @@
     padding-block-end: 10px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
-    height: 668px;
+    min-height: 668px;
   }
 
   .footer-text {
