@@ -119,7 +119,8 @@
 }
 
 .title {
-  margin-block-start: 140px;
+  margin-block-start: 165px;
+  margin-inline-start: -20px;
   font-family: var(--font-family);
   font-weight: var(--font-weight);
   line-height: 83%;
@@ -136,6 +137,7 @@
 }
 
 .subtitle {
+  margin-block-start: 13px;
   background-color: var(--accent-color);
   color: var(--color-subtitle-text);
   font-family: var(--font-family);
@@ -153,20 +155,25 @@
 
 .section__difficult-concentrate {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-block-start: 20px;
+  grid-template-columns: 1fr 2fr;
+  margin-block-start: 42px;
+  margin-block-end: -38px;
   gap: 20px;
+}
+
+.section__attention {
+  margin-block-start: 120px;
 }
 
 .section__concentration {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 20px;
   margin-block-start: 80px;
 }
 
 .section__image {
-  margin-block-start: 55px;
+  margin-block-start: 80px;
 }
 
 .title-text {
@@ -189,10 +196,6 @@
   margin-block-end: 10px;
 }
 
-.section__attention {
-  margin-block-start: 80px;
-}
-
 .subtitle-text {
   background-color: var(--accent-color);
   font-family: var(--font-family);
@@ -210,10 +213,6 @@
   line-height: var(--line-height);
 }
 
-.selection-text:focus {
-  border: 1px solid var(--color-text);
-}
-
 .selection-text {
   text-shadow: 2px 2px 0 var(--accent-color);
   color: var(--color-text);
@@ -227,12 +226,24 @@
   border-bottom: 1px solid var(--color-text);
 }
 
+.selection-text:focus {
+  border: 1px solid var(--color-text);
+}
+
+.block-content-margin {
+  margin-block-start: 20px;
+}
+
 /* Сетки */
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+.section-inner-margin {
+  margin-block-start: 20px;
 }
 
 .gallery img {
@@ -272,21 +283,22 @@
 }
 
 .footer {
+  margin-block-start: 60px;
   display: grid;
   justify-content: center;
   align-items: center;
+  min-height: 1024px;
   height: 100vh;
-  min-height: 768px;
 }
 
 .footer-text {
+  margin-block-start: -250px;
   font-family: var(--font-family);
   font-weight: var(--font-weight);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 83%;
   color: var(--color-title);
   text-shadow: 2px 2px 0 var(--accent-color);
-  margin-block-start: 100px;
 }
 
 @media (width <= 768px) {
@@ -313,13 +325,20 @@
     margin-inline-start: 10px;
   }
 
+  .header__theme-menu {
+    margin-block-start: 5px;
+    margin-block-end: 20px;
+    margin-inline-end: 20px;
+  }
+
   .header__theme-menu-list {
     display: block;
-    margin-block-start: 172px;;
+    margin-block-start: 172px;
   }
 
   .title {
-    margin-block-start: 15px;
+    margin-block-start: 0px;
+    margin-inline-start: -10px;
   }
 
   .subtitle {
@@ -334,10 +353,7 @@
 
   .section-wrapper {
     grid-template-columns: none;
-  }
-
-  .subtitle-container {
-    margin-inline-end: 20px;
+    margin-block-start: 0;
   }
 
   .block-size-minimal {
@@ -345,26 +361,34 @@
   }
 
   .footer {
-    min-height: 1024px;
+    min-height: 768px;
+    height: 100vh;
   }
 
   .footer-text {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-block-start: 0px;
   }
 }
 
 @media (width <= 375px) {
   .header {
     min-height: 375px;
-    height: 100vh;
+    height: 65vh;
   }
 
   .header__block-theme {
     justify-content: end;
+    margin-block-start: 0px;
   }
 
   .header__rec::after {
     margin-inline-start: 10px;
+    margin-inline-end: 10px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 25px;
     margin-inline-end: 10px;
   }
 
@@ -374,7 +398,7 @@
   }
 
   .title {
-    margin-block-start: 0px;
+    margin-block-start: 50px;
     margin-inline-start: 0px;
   }
 
@@ -388,15 +412,49 @@
 
   .subtitle {
     min-width: 0px;
+    margin-block-start: 50px;
   }
 
   .content {
+    padding-block-start: 0px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
   }
 
+  .section__difficult-concentrate {
+    margin-block-start: 275px;
+  }
+
   .section {
     grid: none;
+  }
+
+  .section__attention {
+    margin-block-start: 70px;
+  }
+
+  .block-size-minimal {
+    max-width: none;
+  }
+
+  .title-text {
+    margin-block-end: 5px;
+  }
+
+  .title-text-margin {
+    margin-block-end: 0px;
+  }
+
+  .section-inner-container {
+    margin-block-end: 20px;
+  }
+
+  .subtitle-text-bold {
+    margin-block-start: 15px;
+  }
+
+  .section__concentration {
+    margin-block-start: 50px;
   }
 
   .section-block {
@@ -412,7 +470,8 @@
     padding-block-end: 10px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
-    min-height: 668px;
+    min-height: 375px;
+    height: 100vh;
   }
 
   .footer-text {
