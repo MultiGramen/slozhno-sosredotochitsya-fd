@@ -15,7 +15,7 @@
 .header {
   display: grid;
   min-height: 768px;
-  height: 100vh;
+  height: 100%;
   padding-block-start: 20px;
   padding-block-end: 20px;
   padding-inline-start: 20px;
@@ -302,7 +302,7 @@
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-@media (width <=768px) {
+@media (width <= 768px) {
   .header {
     min-height: 768px;
     padding-block-start: 10px;
@@ -408,7 +408,7 @@
   }
 }
 
-@media (width <=375px) {
+@media (width >= 375px) {
   .header {
     min-height: 668px;
     height: 100vh;
@@ -468,6 +468,7 @@
     padding-block-start: 40px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
+
   }
 
   .section__difficult-concentrate {
