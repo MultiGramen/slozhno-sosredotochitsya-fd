@@ -143,12 +143,45 @@
   font-weight: bold;
   font-size: var(--font-size);
   line-height: 23.4px;
-}768
+}
 
 .content {
+  margin-block-start: 40px;
   padding-block-start: 20px;
   padding-inline-start: 20px;
   padding-inline-end: 20px;
+}
+
+.section__difficult-concentrate {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 10px;
+  margin-block-end: 80px;
+}
+
+.section-inner-container {
+  display: grid;
+  row-gap: 20px;
+}
+
+.section__attention {
+  margin-block-end: 80px;
+}
+
+.section__concentration {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 10px;
+  margin-block-end: 80px;
+}
+
+.section-inner {
+  display: grid;
+  row-gap: 23px;
+}
+
+.box > h3 {
+  margin-block-end: 20px;
 }
 
 .title-text {
@@ -159,6 +192,7 @@
   font-size: var(--font-size);
   line-height: var(--line-height);
   margin-block-end: 20px;
+  width: 315px;
 }
 
 .subtitle-text-bold {
@@ -212,6 +246,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  margin-block-start: 20px;
 }
 
 .gallery img {
@@ -247,7 +282,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-block-start: 42px;
+  margin-block-start: 25px;
 }
 
 .footer {
@@ -309,8 +344,51 @@
   }
 
   .content {
+    margin-block-start: 60px;
+    padding-block-start: 0;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+  }
+
+  .section__difficult-concentrate {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    margin-block-end: 85px;
+  }
+
+  .title-text {
+    width: 236px;
+  }
+
+  .section__attention {
+    margin-block-end: 85px;
+  }
+
+  .section__concentration {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .section-inner {
+    display: grid;
+    row-gap: 20px;
+  }
+
+  .box > h3 {
+    margin-block-end: 20px;
+  }
+
+  .section__image {
+    margin-block-start: 90px;
+  }
+
+  .section-inner-container {
+    display: grid;
+    row-gap: 20px;
   }
 
   .section-tablet {
@@ -323,16 +401,16 @@
     margin-block-start: 0;
   }
 
-  .subtitle-text {
-    margin-block-start: 6px;
-  }
-
   .block-size-minimal {
     max-width: 236px;
   }
 
+  .gallery {
+    margin-block-start: 20px;
+  }
+
   .footer {
-    margin-block-start: 45px;
+    margin-block-start: 60px;
     height: 1024px;
     min-height: 768px;
   }
@@ -345,6 +423,10 @@
 
 @media (width <= 375px) {
   .header {
+    padding-block-start: 0;
+    padding-block-end: 0;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
     display: grid;
     grid-template-rows: 1fr min-content 1fr;
     justify-items: end;
@@ -368,7 +450,7 @@
 
   .decorated-zone::after {
     position: absolute;
-    left: 15px;
+    left: 20px;
     bottom: 10px;
   }
 
@@ -413,12 +495,18 @@
   }
 
   .content {
-    padding-block-start: 40px;
+    margin-block-start: 40px;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-block-start: 0px;
     padding-inline-start: 10px;
-    padding-inline-end: 10px;
+    padding-inline-end: 15px;
   }
 
   .title-text {
+    width: 356px;
+    margin-block-end: 0;
+    margin-inline-end: 0;
     padding-inline-start: 5px;
     padding-inline-end: 5px;
   }
@@ -426,6 +514,10 @@
   .box {
     display: grid;
     row-gap: 5px;
+  }
+
+  .box > h3 {
+    margin-block-end: 10px;
   }
 
   .section-inner {
@@ -440,7 +532,7 @@
 
   .section {
     grid: none;
-    margin-block-end: 50px;
+    margin-block-end: 49px;
   }
 
   .subtitle-text {
@@ -455,6 +547,11 @@
 
   .block-size-minimal {
     max-width: none;
+    margin-block-end: 20px;
+  }
+
+  .section__image {
+    margin-block-start: 49px;
   }
 
   .section-block {
@@ -463,12 +560,14 @@
 
   .gallery {
     display: block;
+    margin-block-start: 10px;
   }
 
   .footer {
-    padding-block-end: 10px;
+    padding-block-start: 10px;
+    padding-block-end: 0px;
     padding-inline-start: 10px;
-    padding-inline-end: 10px;
+    padding-inline-end: 0px;
     margin-block-start: 0;
     height: 100vh;
     min-height: 668px;
